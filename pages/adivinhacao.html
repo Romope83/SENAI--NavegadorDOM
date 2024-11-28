@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Adivinhação</title>
+  </head>
+  <body>
+    <div class="u-flex u-flex--center u-flex--column">
+      <h1>Jogo da Adivinhação</h1>
+      <label for="btnAdivinhar">Escolha um número de 1 a 10!</label>
+      <input
+        name="btnAdivinhar"
+        class="ipt-text"
+        type="number"
+        min="1"
+        max="10"
+        placeholder="Digite"
+        required
+      />
+      <button onclick="adivinhacao()" class="btn">Adivinhar!</button>
+      <p name="lbl-result" class="lbl-result">Surprise!!</p>
+    </div>
+  </body>
+  <script src="../main.js"></script>
+</html>

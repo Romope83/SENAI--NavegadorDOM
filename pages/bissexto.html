@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Ano Bissexto</title>
+  </head>
+  <body>
+    <div class="u-flex u-flex--center u-flex--column">
+      <h1>Verificador de ano bissexto</h1>
+      <label for="btnYear">Escolha um ano!</label>
+      <input
+        name="btnYear"
+        class="ipt-text"
+        type="number"
+        placeholder="Digite"
+        min="0";
+        max="2099"
+        required
+        step="1"
+      />
+      <button onclick="verificarBissexto()" class="btn">Verificar!</button>
+      <p name="lbl-result" class="lbl-result"></p>
+    </div>
+  </body>
+  <script src="../main.js"></script>
+</html>

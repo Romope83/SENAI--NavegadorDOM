@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Ano Bissexto</title>
+  </head>
+  <body>
+    <div class="u-flex u-flex--center u-flex--column">
+      <h1>Calculadora de Média Escolar</h1>
+      <label for="nota01">Digite as notas</label>
+      <input
+        name="nota01"
+        class="ipt-text"
+        type="number"
+        placeholder="Digite a nota da primeira prova"
+        ;
+        required
+        step="0.1"
+      />
+
+      <input
+        name="nota02"
+        class="ipt-text"
+        type="number"
+        placeholder="Digite a nota da segunda prova"
+        ;
+        required
+        step="0.1"
+      />
+      <input
+        name="nota03"
+        class="ipt-text"
+        type="number"
+        placeholder="Digite a nota da terceira prova"
+        ;
+        required
+        step="0.1"
+      />
+      <input
+        name="nota04"
+        class="ipt-text"
+        type="number"
+        placeholder="Digite a nota da quarta prova"
+        ;
+        required
+        step="0.1"
+      />
+      <button onclick="mediaEscolar()" class="btn">Calcular Média</button>
+      <p name="lbl-result" class="lbl-result"></p>
+    </div>
+  </body>
+  <script src="../main.js"></script>
+</html>

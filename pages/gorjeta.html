@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Ano Bissexto</title>
+  </head>
+  <body>
+    <div class="u-flex u-flex--center u-flex--column">
+      <h1>Calculadora de Média Escolar</h1>
+      <label for="valorConta">Valor da conta</label>
+      <input
+        name="valorConta"
+        class="ipt-text"
+        type="number"
+        placeholder="Digite o valor da conta"
+        ;
+        required
+        step="0.1"
+      />
+      <label for="satisfacao">Nivel de satisfação</label>
+      <span>BOM</span
+      ><input
+        name="satisfacao"
+        value="BOM"
+        class="ipt-text"
+        type="radio"
+        required
+      />
+      <span>ÓTIMO</span>
+      <input
+        name="satisfacao"
+        value="OTIMO"
+        class="ipt-text"
+        type="radio"
+        required
+      />
+      <span>EXCELENTE</span>
+      <input
+        name="satisfacao"
+        value="EXCELENTE"
+        class="ipt-text"
+        type="radio"
+        required
+      />
+
+      <button onclick="mediaEscolar()" class="btn">Calcular Gorjeta</button>
+      <p name="lbl-result" class="lbl-result"></p>
+    </div>
+  </body>
+  <script src="../main.js"></script>
+</html>
