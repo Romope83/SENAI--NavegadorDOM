@@ -67,3 +67,37 @@ function mediaEscolar() {
     media >= 7 ? "Aprovado!" : media < 5 ? "Reprovado!" : "Recuperação!";
   fillLabel("lbl-result", message);
 }
+
+function gorjeta() {
+  let bill = parseFloat(getFieldValueByName("valorConta"));
+  let avaliation = document.querySelector('input[name="satisfacao"]:checked');
+  let message = "";
+  if (isNaN(bill)) message = "O valor da conta é obrigatório";
+  if (avaliation == null)
+    message == ""
+      ? (message = "A avaliação é obrigatória")
+      : (message += "</br> A avaliação é obrigatória");
+
+  if (message != "") {
+    fillLabel("lbl-result", message);
+    return;
+  }
+
+  let fullBill =
+    avaliation.value == "BOM"
+      ? bill + bill * 0.1
+      : avaliation.value == "OTIMO"
+      ? bill + bill * 0.15
+      : bill + bill * 0.2;
+  fillLabel("lbl-result", `O valor da conta é R$: ${fullBill.toFixed(2)}`);
+}
+
+function saudar() {
+  let currentHour = new Date().getHours();
+  let message = "";
+  if (currentHour >= 0 && currentHour < 12) message = "Bom dia!";
+  else if (currentHour < 18) message = "Boa tarde";
+  else message = "Boa noite!";
+
+  fillLabel("lbl-result", message);
+}

@@ -14,15 +14,22 @@
   margin: 0;
   padding: 0;
 }
+
+a:link,
+a:active {
+  text-decoration: none;
+  color: white;
+}
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
   font-size: 1.6rem;
   width: 100vw;
   height: 100vh;
-  margin-top: var(--default-margin);
+  box-sizing: inherit;
 }
 
 /*UTILITÁRIOS*/
@@ -41,23 +48,38 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  background-color: blue;
+  height: 80vh;
+  padding: 5rem;
+  width: 50vw;
+  margin: auto auto;
 }
 .main-titulo {
   font-size: var(--font-big);
   font-weight: 600;
   background-color: rgb(198, 255, 196);
+  grid-column: 1/-1;
+  height: 50%;
 }
 .main-container {
-  background-color: aqua;
   display: grid;
-  grid-column: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   flex: 1;
+  gap: 2rem;
 }
 
 .main-item {
-  background-color: brown;
-  min-width: 10%;
+  background-color: rgb(233, 232, 232);
+  border-color: lightgray;
+  border-radius: 2rem;
+  box-shadow: black 1 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-item a {
+  font-size: var(--font-big);
+  color: var(--secondary-color);
 }
 
 .ipt-text {
@@ -81,4 +103,21 @@ body {
 .lbl-result {
   font-size: var(--font-big);
   color: var(--main-color);
+}
+
+header {
+  height: 5vh;
+  background-color: blueviolet;
+}
+footer {
+  height: 15vh;
+  background-color: blueviolet;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header-title {
+  color: white;
 }
