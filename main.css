@@ -4,8 +4,9 @@
   --input-padding: 0.3rem 1.5rem;
   --font-nomal: 1.6rem;
   --font-big: 2.5rem;
-  --default-gap: 2rem;
+  --gap-default: 2rem;
   --default-margin: 4rem;
+  --gap--big: 5rem;
 }
 
 *,
@@ -35,13 +36,19 @@ body {
 /*UTILITÁRIOS*/
 .u-flex {
   display: flex;
-  gap: var(--default-gap);
 }
 .u-flex--center {
   align-items: center;
+  justify-content: center;
 }
 .u-flex--column {
   flex-direction: column;
+}
+.u-flex-gap--default {
+  gap: var(--gap-default);
+}
+.u-flex-gap--big {
+  gap: var(--gap-big);
 }
 
 .main {
@@ -76,6 +83,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+padding: 3rem;
 }
 
 .main-item:hover {
