@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Strings</title>
+  </head>
+  <body class="u-flex u-flex--center u-flex--column u-flex-gap--big">
+    <h1>Manipulação de strings</h1>
+    <input
+      name="campo"
+      class="ipt-text"
+      type="text"
+      required
+      placeholder="Digite uma palavra/frase"
+    />
+    <p name="lbl-result" class="lbl-result">Respostas</p>
+    <div>
+      <button onclick="{tamanho(getFieldValueByName('campo'))}" class="btn">
+        Quantidade de caracteres
+      </button>
+
+      <button onclick="{maiusculo(getFieldValueByName('campo'))}" class="btn">
+        MAIUSCULAS
+      </button>
+
+      <div>
+           <input
+      name="palavraBuscada"
+      class="ipt-text"
+      type="text"
+      required
+      placeholder="Palavra a buscar"
+    />
+               <input
+      name="palavraSubstituir"
+      class="ipt-text"
+      type="text"
+      required
+      placeholder="Palavra a substituir"
+    />
+      <button onclick="{substituir(getFieldValueByName('campo'))}" class="btn">
+        SUBSTITUIR
+        </div>
+              <div>
+           <input
+      name="contem"
+      class="ipt-text"
+      type="text"
+      required
+      placeholder="Palavra a buscar"
+    />
+      <button onclick="{contem(getFieldValueByName('campo'))}" class="btn">
+        CONTÉM
+      </button>
+    </div>
+                  <div>
+           <input
+      name="digitos"
+      class="ipt-text"
+      type="number"
+      required
+      placeholder="Quantidade de Dígitos"
+    />
+      <button onclick="{validarSenha(getFieldValueByName('campo'))}" class="btn">
+        VALIDAR SENHA
+      </button>
+    </div>
+    </div>
+  </body>
+  <script src="../main.js"></script>
+  <script>
+    function tamanho(frase) {
+      fillLabel("lbl-result", frase.length);
+    }
+    function maiusculo(frase) {
+      fillLabel("lbl-result", frase.toUpperCase());
+    }
+    function substituir(frase) {
+
+      fillLabel("lbl-result", frase.replace(getFieldValueByName('palavraBuscada'),getFieldValueByName('palavraSubstituir')));
+    }    
+
+        function contem(frase) {
+
+      fillLabel("lbl-result", frase.includes(getFieldValueByName('contem')));
+    }    
+        function validarSenha(frase) {
+
+      fillLabel("lbl-result", frase.length == getFieldValueByName('digitos')? 'Senha Válida': 'Senha Inválida');
+    }     
+  </script>
+</html>
