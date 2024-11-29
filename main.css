@@ -56,7 +56,8 @@ body {
 .main-titulo {
   font-size: var(--font-big);
   font-weight: 600;
-  background-color: rgb(198, 255, 196);
+  background-color: var(--main-color);
+  color: white;
   grid-column: 1/-1;
   height: 50%;
 }
@@ -77,9 +78,25 @@ body {
   justify-content: center;
 }
 
+.main-item:hover {
+  background-color: var(--main-color);
+  border-color: lightgray;
+  border-radius: 2rem;
+  box-shadow: black 1 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3ms;
+}
+
 .main-item a {
   font-size: var(--font-big);
   color: var(--secondary-color);
+}
+.main-item:hover a {
+  font-size: var(--font-big);
+  color: white;
+  transition: all 0.3ms;
 }
 
 .ipt-text {
