@@ -10,7 +10,7 @@ function adivinhacao() {
     return;
   }
 
-  let result = document.getElementsByClassName("lbl-result")[0];
+
   let correct = secretNumber == typedNumber;
   if (correct) fillLabel("lbl-result", "Parabéns! Você acertou");
   else
