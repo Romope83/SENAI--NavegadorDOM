@@ -146,3 +146,8 @@ h1 {
 .header-title {
   color: white;
 }
+
+.input-group{
+  display: flex;
+  width: 20vw;
+}

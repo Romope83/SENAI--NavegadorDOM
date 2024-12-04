@@ -101,3 +101,22 @@ function saudar() {
 
   fillLabel("lbl-result", message);
 }
+
+function ingredientes() {
+  const checkboxes = document.querySelectorAll(
+    '.input-group input[type="checkbox"]'
+  );
+  const selecionados = [];
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      selecionados.push(checkbox.nextElementSibling.innerText);
+    }
+  });
+  fillLabel(
+    "lbl-result",
+    selecionados.length > 0
+      ? "Selecionados: " + selecionados.join(", ")
+      : "Nenhuma opção selecionada."
+  );
+}

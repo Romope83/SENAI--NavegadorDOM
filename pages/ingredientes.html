@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Adivinhação</title>
+  </head>
+  <body>
+    <div class="u-flex u-flex--center u-flex--column">
+      <h1>Selecionar Ingredientes</h1>
+      <div class="input-group">
+        <input class="ing-item" name="arroz" type="checkbox" />
+        <label for="arroz">Arroz</label>
+      </div>
+      <div class="input-group">
+        <input class="ing-item" name="feijao" type="checkbox" />
+        <label for="feijao">feijão</label>
+      </div>
+      <div class="input-group">
+        <input class="ing-item" name="batata" type="checkbox" />
+        <label for="batata">Batata</label>
+      </div>
+      <div class="input-group">
+        <input class="ing-item" name="macarrao" type="checkbox" />
+        <label for="macarrao">Macarrão</label>
+      </div>
+      <div class="input-group">
+        <input class="ing-item" name="carne" type="checkbox" />
+        <label for="carne">Carne</label>
+      </div>
+      <button onclick="ingredientes()" class="btn">
+        Exibir Ingredientes Selecionados
+      </button>
+      <p name="lbl-result" class="lbl-result"></p>
+    </div>
+  </body>
+  <script src="../main.js"></script>
+</html>
