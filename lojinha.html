@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="lojinha.css" />
+  </head>
+  <body>
+    <h1>Produtos</h1>
+    <div id="product-list"></div>
+
+    <h2>Carrinho</h2>
+    <div id="cart">
+      <ul id="cart-items"></ul>
+      <p>Total: R$ <span id="cart-total">0.00</span></p>
+      <button onclick="clearCart()">Limpar Carrinho</button>
+      <button id="checkout-btn" onclick="checkout()">Comprar</button>
+    </div>
+
+    <script src="lojinha.js"></script>
+  </body>
+</html>

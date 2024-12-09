@@ -1,0 +1,30 @@
+/* style.css */
+
+button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
+
+#cart button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#checkout-btn {
+  background-color: #28a745;
+}
+
+#checkout-btn:hover {
+  background-color: #218838;
+}
